@@ -38,22 +38,11 @@ std::string ManagerConnection::get(void)
     std::string command;
 
     std::getline(std::cin, command);
-    // if (std::cin.eof()) {
-    //     this->log("end of file");
-    //     return ("END");
-    // }
     this->_output << ">> \"" << command.substr(0, command.find('\n')) << "\"" << std::endl;
     return command;
 }
 
-/*************  ✨ Codeium Command ⭐  *************/
-/// \brief Send a command to the manager and log it
-///
-/// \param command The command to send
-///
-/// This function writes the command to the manager's output stream and
-/// logs it in the log file.
-/******  90e05122-a845-4563-84a5-2da8e2d835ba  *******/void ManagerConnection::put(std::string const &command)
+void ManagerConnection::put(std::string const &command)
 {
     this->_output << "<< \"" << command << "\"" << std::endl;
     std::cout << command << std::endl;
@@ -102,12 +91,4 @@ std::ostream &ManagerConnection::get_log(void)
 {
     return (this->_output);
 }
-/*
-BOARD
-10,10,2
-10,11,2
-10,12,2
-10,13,2
-10,14,2
-DONE
-*/
+
