@@ -1,0 +1,12 @@
+-- stating the main loop
+>> "START 20"
+<< "OK"
+>> "TURN 10,10"
+<< "11,11"
+>> "TURN 10,11"
+<< "10,12"
+>> "10,13"
+-- command not found :
+-- 10,13
+>> "TURN 10,13"
+<< "10,9"
